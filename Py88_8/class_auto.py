@@ -9,7 +9,7 @@ class Auto:
         print('Move')
 
     def birthday(self, age):
-        print(age + 1)
+        age += 1
 
     def stop(self):
         print('Stop')
