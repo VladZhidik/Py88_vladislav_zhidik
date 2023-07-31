@@ -1,0 +1,22 @@
+{% extends 'index.html' %}
+
+{% block title %}
+    Car
+{% endblock %}
+
+{% block create_car %}
+    {% if error %}
+        {{ error }}
+    {% else %}
+        {{ success_message }}
+    {% endif %}
+
+    {% if form %}
+        <form action="" method="post">
+            {% csrf_token %}
+            {{ form.vin_code }}
+            {{ form.auto_model }}
+            <button>Create</button>
+        </form>
+    {% endif %}
+{% endblock %}

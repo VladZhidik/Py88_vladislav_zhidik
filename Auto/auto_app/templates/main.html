@@ -1,0 +1,22 @@
+{% extends 'index.html' %}
+
+{% block title %}
+    CarSharing
+{% endblock %}
+
+{% block main %}
+    <table cellpadding="10px" border="solid black">
+        <tr>
+            <th>Vin Code</th>
+            <th>Model</th>
+            <th>User Name</th>
+        </tr>
+        {% for auto in all_autos %}
+            <tr>
+                <td>{{ auto.vin_code }}</td>
+                <td>{{ auto.auto_model }}</td>
+                <td>{{ auto.user.name }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
